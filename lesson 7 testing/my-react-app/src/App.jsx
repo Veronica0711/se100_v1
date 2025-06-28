@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
-import Tabs from './components/Tabs';
-import Product from './components/Product';
-import FinanceCalculator from './components/Finance';
-import AboutUs from './components/AboutUs';
-import ContactUs from './components/ContactUs';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Product from "./pages/Product";
+import Finance from "./pages/Finance";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [activeTab, setActiveTab] = useState('Product');
-
   return (
-    <div className="container">
-      <h1>My Simple Website</h1>
-      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="tab-content">
-        {activeTab === 'Product' && <Product />}
-        {activeTab === 'Finance' && <Finance />}
-        {activeTab === 'About Us' && <AboutUs />}
-        {activeTab === 'Contact Us' && <ContactUs />}
+    <Router>
+      <div className="container">
+        <h1>My Simple Website</h1>
+        <nav>
+          <Link to="/Product" className="nav-btn">Product</Link>
+          <Link to="/Finance" className="nav-btn">Finance</Link>
+          <Link to="/AboutUs" className="nav-btn">About Us</Link>
+          <Link to="/ContactUs" className="nav-btn">Contact Us</Link>
+        </nav>
+        <Routes>
+          <Route path="/Product" element={<Product />} />
+          <Route path="/Finance" element={<Finance />} />
+          <Route path="/AboutUs" element={<About />} />
+          <Route path="/ContactUs" element={<Contact />} />
+          <Route path="/" element={<Product />} /> {/* Default page */}
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 

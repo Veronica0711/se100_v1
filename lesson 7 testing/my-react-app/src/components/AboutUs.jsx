@@ -1,12 +1,9 @@
-import React from 'react';
-
-function AboutUs() {
+function About() {
   return (
     <div>
       <h2>About Us</h2>
-      <p>We are a company dedicated to providing great products and services.</p>
+      <p>This is the about page. Learn more about us here.</p>
     </div>
   );
 }
-
-export default AboutUs;
+export default About;

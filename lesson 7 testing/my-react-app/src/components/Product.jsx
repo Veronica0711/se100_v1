@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Product() {
   return (
     <div>
@@ -8,5 +6,4 @@ function Product() {
     </div>
   );
 }
-
 export default Product;
