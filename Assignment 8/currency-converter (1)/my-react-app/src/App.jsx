@@ -1,12 +1,18 @@
+import { useState } from 'react'
 import './App.css'
-import currencydropdown from './currencydropdown';
+import CurrencyDropdown from './CurrencyDropdown';
+import CurrencyContext from './CurrencyContext';
 
 function App() {
+  const [fromCurrency, setFromCurrency] = useState("AED")
+  const [toCurrency, setToCurrency] = useState("AED")
 
   return (
     <>
-      <h1>Currency Converter</h1>
-      <currencydropdownropdown/>
+      <CurrencyContext.Provider value={{ fromCurrency, setFromCurrency, toCurrency, setToCurrency }}>
+        <h1>Currency Converter</h1>
+        <CurrencyDropdown/>
+      </CurrencyContext.Provider>
     </>
   )
 }

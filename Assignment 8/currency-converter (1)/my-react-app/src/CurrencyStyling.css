@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    margin: 10px;
+}
+
+#currencySelect {
+    height: 50px;
+    width: 200px;
+    background-color: orange;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.converter-input {
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    border: solid grey 1px;
+}
+
+.converter-result {
+    font-size: 32px;
+    font-weight: bold;
+}

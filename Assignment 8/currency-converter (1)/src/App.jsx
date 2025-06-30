@@ -1,12 +1,12 @@
 import './App.css'
-import currencydropdown from './currencydropdown';
+import CurrencyDropdown from './CurrencyDropdown';
 
 function App() {
 
   return (
     <>
       <h1>Currency Converter</h1>
-      <currencydropdownropdown/>
+      <CurrencyDropdown/>
     </>
   )
 }
